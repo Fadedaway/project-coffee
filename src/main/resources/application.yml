@@ -1,8 +1,0 @@
-#日志级别
-logging:
-  level:
-    root: info
-
-#端口号
-server:
-  port: 80
