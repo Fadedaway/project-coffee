@@ -14,10 +14,6 @@
     <name>coffee-mWeb</name>
     <description>Mobile Api</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.jovi.magic</groupId>
