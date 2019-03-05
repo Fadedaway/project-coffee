@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.jovi.magic</groupId>
 	<artifactId>project-coffee</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${coffee.version}</version>
 	<name>project-coffee</name>
 
 	<properties>
