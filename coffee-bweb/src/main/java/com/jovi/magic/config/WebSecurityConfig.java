@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.formLogin().and()
+        httpSecurity.formLogin().successForwardUrl("/auth").and()
                 .authorizeRequests().antMatchers(
                 "/js/**",
                 "/css/**",
@@ -29,6 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService());
+        auth.inMemoryAuthentication().passwordEncoder(new MyPasswordEncoder());
+//        auth.userDetailsService(userDetailsService());
     }
 }

@@ -39,10 +39,6 @@ public class MyUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException(String.format("No user found with userMobile: %s", userMobile));
         }
 
-        if (!userInfo.matchPassword(userMobile)) {
-            throw new BadCredentialsException("Bad credentials");
-        }
-
         Set<GrantedAuthority> authorities = roleInfoService.getRoleByUserId(userInfo.getId())
                 .stream().map(roleInfo -> new SimpleGrantedAuthority(roleInfo.getRoleCode())).collect(Collectors.toSet());
         return new User(userInfo.getUserMobile(), userInfo.getPassword(), userInfo.isEnabled(), userInfo.isAccountNonExpired(),
