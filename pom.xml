@@ -21,6 +21,12 @@
 		<commons.lang.version>3.7</commons.lang.version>
 	</properties>
 
+	<modules>
+		<module>coffee-bweb</module>
+		<module>coffee-mweb</module>
+		<module>coffee-data</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
