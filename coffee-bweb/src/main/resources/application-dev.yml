@@ -1,0 +1,15 @@
+# 数据库配置
+spring:
+  datasource:
+    type: com.mysql.cj.jdbc.MysqlDataSource
+    url: jdbc:mysql://67.209.184.235:3306/projectCoffee?characterEncoding=utf8&useSSL=false
+    username: root
+    password: joviLoveJoice
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL5Dialect
