@@ -9,3 +9,8 @@ server:
   servlet:
     context-path: /coffee
 
+# 当前运行环境
+spring:
+  profiles:
+    active: dev
+

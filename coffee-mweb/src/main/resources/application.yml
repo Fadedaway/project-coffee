@@ -6,3 +6,10 @@ logging:
 # 端口号
 server:
   port: 8090
+  servlet:
+      context-path: /coffee
+
+# 当前运行环境
+spring:
+  profiles:
+    active: dev
