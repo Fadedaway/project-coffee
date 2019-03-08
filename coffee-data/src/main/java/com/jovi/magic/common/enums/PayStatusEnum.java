@@ -5,12 +5,13 @@ import lombok.Setter;
 
 /**
  * @author fanjiawei
- * @date Created on 2019/3/7
+ * @date Created on 2019/3/8
  */
-public enum StatusEnum {
+public enum PayStatusEnum {
 
-    A("A", "Active"),
-    D("D", "Deleted");
+    TO_BE_PAID("TO_BE_PAID", "待支付"),
+    PAID("PAID", "已支付"),
+    CANCELLED("CANCELLED", "已取消");
 
     @Getter
     @Setter
@@ -19,7 +20,7 @@ public enum StatusEnum {
     @Setter
     private String label;
 
-    StatusEnum(String value, String label) {
+    PayStatusEnum(String value, String label) {
         this.value = value;
         this.label = label;
     }

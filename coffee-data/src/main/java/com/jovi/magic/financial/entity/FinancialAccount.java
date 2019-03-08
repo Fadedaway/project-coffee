@@ -1,4 +1,4 @@
-package com.jovi.magic.role.entity;
+package com.jovi.magic.financial.entity;
 
 import com.jovi.magic.common.BaseEntity;
 import lombok.Data;
@@ -12,26 +12,26 @@ import javax.persistence.Table;
 
 /**
  * @author fanjiawei
- * @date Created on 2019/3/7
+ * @date Created on 2019/3/8
  */
 @Data
 @Entity
-@Table(name = "user_role_rel")
+@Table(name = "financial_account")
 @EqualsAndHashCode(callSuper = true)
 @EntityListeners(AuditingEntityListener.class)
-public class UserRoleRel extends BaseEntity {
+public class FinancialAccount extends BaseEntity {
 
-    private static final long serialVersionUID = 6667204839954515039L;
-
-    /**
-     * 用户id
-     */
-    @Column(name = "user_id")
-    private Long userId;
+    private static final long serialVersionUID = -7320279250517536845L;
 
     /**
-     * 角色id
+     * 店铺id
      */
-    @Column(name = "role_id")
-    private Long roleId;
+    @Column(name = "shop_id")
+    private Long shopId;
+
+    /**
+     * 总金额(分)
+     */
+    @Column(name = "total_amount")
+    private Long totalAmount;
 }

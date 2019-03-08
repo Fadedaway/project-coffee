@@ -12,11 +12,13 @@ import javax.persistence.*;
  * @date Created on 2019/3/7
  */
 @Data
-@Table
 @Entity
+@Table(name = "role_info")
 @EqualsAndHashCode(callSuper = true)
 @EntityListeners(AuditingEntityListener.class)
 public class RoleInfo extends BaseEntity {
+
+    private static final long serialVersionUID = 8573557356895362564L;
 
     /**
      * 角色名称

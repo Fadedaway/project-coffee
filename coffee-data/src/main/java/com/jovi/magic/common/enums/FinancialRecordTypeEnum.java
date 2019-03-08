@@ -5,12 +5,12 @@ import lombok.Setter;
 
 /**
  * @author fanjiawei
- * @date Created on 2019/3/7
+ * @date Created on 2019/3/8
  */
-public enum StatusEnum {
+public enum FinancialRecordTypeEnum {
 
-    A("A", "Active"),
-    D("D", "Deleted");
+    IN("IN", "收入"),
+    OUT("OUT", "支出");
 
     @Getter
     @Setter
@@ -19,7 +19,7 @@ public enum StatusEnum {
     @Setter
     private String label;
 
-    StatusEnum(String value, String label) {
+    FinancialRecordTypeEnum(String value, String label) {
         this.value = value;
         this.label = label;
     }

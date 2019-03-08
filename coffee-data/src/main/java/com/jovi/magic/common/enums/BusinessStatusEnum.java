@@ -5,12 +5,12 @@ import lombok.Setter;
 
 /**
  * @author fanjiawei
- * @date Created on 2019/3/7
+ * @date Created on 2019/3/8
  */
-public enum StatusEnum {
+public enum BusinessStatusEnum {
 
-    A("A", "Active"),
-    D("D", "Deleted");
+    OPEN("OPEN", "营业中"),
+    CLOSE("CLOSE", "歇业中");
 
     @Getter
     @Setter
@@ -19,7 +19,7 @@ public enum StatusEnum {
     @Setter
     private String label;
 
-    StatusEnum(String value, String label) {
+    BusinessStatusEnum(String value, String label) {
         this.value = value;
         this.label = label;
     }
